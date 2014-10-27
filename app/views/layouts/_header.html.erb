@@ -1,0 +1,13 @@
+<header>
+	<nav id="Sign_in">
+		<% if member_signed_in? %>
+			Signed in as <%= current_member.email %>:
+			<%= link_to "Sign out", destroy_member_session_path, :method => :delete %>
+		<% else %>
+			<%= link_to "Sign up", new_member_registration_path %> or
+			<%= link_to "Sign in", new_member_session_path %>
+		<% end %>	
+	</nav>
+	<h1>Ashtead Allotmentes Association</h1>
+	<h2>Healthing Eating and Exersice preserve Life's Balance</h2>
+</header>
